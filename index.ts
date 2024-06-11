@@ -39,6 +39,8 @@ const you = {
 }
 
 
+// type Alias
+type Price = 45 | 30 | 25
 // Array of Properties
 const properties : {
     image: string;
@@ -69,7 +71,7 @@ const properties : {
     {
         image: 'images/poland-property.jpg',
         title: 'Polish Cottage',
-        price: 34,
+        price: 30,
         location: {
             firstLine: 'no 23',
             city: 'Gdansk',
@@ -82,7 +84,7 @@ const properties : {
     {
         image: 'images/london-property.jpg',
         title: 'London Flat',
-        price: 23,
+        price: 25,
         location: {
             firstLine: 'flat 15',
             city: 'London',
