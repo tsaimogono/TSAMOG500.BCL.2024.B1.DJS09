@@ -45,12 +45,12 @@ type Price = 45 | 30 | 25
 const properties : {
     image: string;
     title: string;
-    price: number;
+    price: Price;
     location: {
         firstLine: string;
         city: string;
         code: number;
-        country: string;
+        country:  'Colombia' | 'Poland' | 'United Kingdom';
     };
     contact: [ number, string ];
     isAvailable: boolean;
