@@ -58,8 +58,8 @@ const properties:{image: string;
         firstLine: string;
         city: string;
         code: number;
-        country: [number, string];
-};  contact: string;
+        country:string;
+};  contact:[ number, string ];
 isAvailable: boolean;
 }[] = [
     {
