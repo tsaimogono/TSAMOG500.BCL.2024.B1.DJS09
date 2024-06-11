@@ -31,13 +31,16 @@ function showReviewTotal (value : number, reviewer: string, isLoyalty : boolean)
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 const you: {
-    userName : string;
-    isReturning: boolean
+    firstName : string;
+    lastName: string;
+    isReturning: boolean;
+    age: number;
 } = {
-    userName: 'Bobby',
-    isReturning: true,
+   firstName: 'Bobby',
+   lastName: 'Brown',
+   isReturning: true,
+   age: 35
 }
-
 
 function populateUser(isReturning : boolean, userName : string ) {
     if (isReturning){
