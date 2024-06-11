@@ -41,6 +41,7 @@ const you = {
 
 // type Alias
 type Price = 45 | 30 | 25
+type Country = 'Colombia' | 'Poland' | 'United Kingdom'
 // Array of Properties
 const properties : {
     image: string;
@@ -50,7 +51,7 @@ const properties : {
         firstLine: string;
         city: string;
         code: number;
-        country:  'Colombia' | 'Poland' | 'United Kingdom';
+        country: Country; 
     };
     contact: [ number, string ];
     isAvailable: boolean;
