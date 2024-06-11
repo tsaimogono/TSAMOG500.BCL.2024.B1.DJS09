@@ -58,7 +58,7 @@ const properties:{image: string;
         firstLine: string;
         city: string;
         code: number;
-        country: string;
+        country: [number, string];
 };  contact: string;
 isAvailable: boolean;
 }[] = [
@@ -72,7 +72,7 @@ isAvailable: boolean;
             code: 45632,
             country: 'Colombia'
         },
-        contact: 'marywinkle@gmail.com',
+        contact:[+1123495082908, 'marywinkle@gmail.com'],
         isAvailable: true  
     },
     {
@@ -85,7 +85,7 @@ isAvailable: boolean;
             code: 343903,
             country: 'Poland'
         },
-        contact: 'garydavis@hotmail.com',
+        contact: [+1123495082908, 'garydavis@hotmail.com'],
         isAvailable: false 
     },
     {
@@ -98,7 +98,7 @@ isAvailable: boolean;
             code: 35433,
             country: 'United Kingdom',
         },
-        contact: 'andyluger@aol.com',
+        contact: [+1123495082908, 'andyluger@aol.com'],
         isAvailable: true
     }
 ]
