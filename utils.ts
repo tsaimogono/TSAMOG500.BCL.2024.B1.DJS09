@@ -30,5 +30,5 @@ function add( firstValue: number, secondValue: number ) : number {
 export function makeMultiple(value: number) {
     if (value > 1) {
         return 's'
-    } 
+    } else return ''
 }
