@@ -62,10 +62,23 @@ const properties:{image: string;
 };  contact: string;
 isAvailable: boolean;
 }[] = [
-{
-    
-}
+    {
+        image: '',
+        title: 'Colombian Shack',
+        price: 45,
+        location: {
+            firstLine: 'shack 37',
+            city: 'Bogota',
+            code: 45632,
+            country: 'Colombia'
+        },
+        contact: 'marywinkle@gmail.com',
+        isAvailable: true
+        
+    }
 ]
+
+
 
 function populateUser(isReturning : boolean, userName: string ) {
     if (isReturning == true){
