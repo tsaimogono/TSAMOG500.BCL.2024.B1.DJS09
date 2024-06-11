@@ -1,6 +1,7 @@
 
-import { showReviewTotal, populateUser } from './utils'
+import { showReviewTotal, populateUser, showDetails } from './utils'
 import { Permissions , LoyaltyUser } from './enums'
+import { Price, Country } from './types'
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
 
@@ -38,15 +39,11 @@ const you = {
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
 
-
-// type Alias
-type Price = 45 | 30 | 25
-type Country = 'Colombia' | 'Poland' | 'United Kingdom'
 // Array of Properties
 const properties : {
     image: string;
     title: string;
-    price: Price;
+    price: number;
     location: {
         firstLine: string;
         city: string;
