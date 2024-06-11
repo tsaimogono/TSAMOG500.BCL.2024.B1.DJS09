@@ -59,8 +59,13 @@ const properties:{image: string;
         city: string;
         code: number;
         country: string;
-
-};
+};  contact: string;
+isAvailable: boolean;
+}[] = [
+{
+    
+}
+]
 
 function populateUser(isReturning : boolean, userName: string ) {
     if (isReturning == true){
