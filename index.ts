@@ -1,7 +1,7 @@
 
 import { showReviewTotal, populateUser, showDetails } from './utils'
-import { Permissions , LoyaltyUser } from './enums'
 import { Price, Country } from './types'
+import { Permissions , LoyaltyUser } from './enums'
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
 
@@ -48,7 +48,7 @@ const properties : {
         firstLine: string;
         city: string;
         code: number;
-        country: Country; 
+        country: string;
     };
     contact: [ number, string ];
     isAvailable: boolean;
@@ -69,7 +69,7 @@ const properties : {
     {
         image: 'images/poland-property.jpg',
         title: 'Polish Cottage',
-        price: 30,
+        price: 34,
         location: {
             firstLine: 'no 23',
             city: 'Gdansk',
@@ -82,7 +82,7 @@ const properties : {
     {
         image: 'images/london-property.jpg',
         title: 'London Flat',
-        price: 25,
+        price: 23,
         location: {
             firstLine: 'flat 15',
             city: 'London',
@@ -96,19 +96,8 @@ const properties : {
 
 // Functions
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
+
 populateUser(you.isReturning, you.firstName)
-
-let authorityStatus : any
-
-isLoggedIn = false
-
-function showDetails(authorityStatus: boolean | Permissions, element : HTMLDivElement, price: number) {
-   if (authorityStatus) {
-       const priceDisplay = document.createElement('div')
-       priceDisplay.innerHTML = price.toString() + '/night'
-       element.appendChild(priceDisplay)
-   }
-}
 
 // Add the properties
 for (let i = 0; i < properties.length; i++) {
@@ -118,8 +107,8 @@ for (let i = 0; i < properties.length; i++) {
     const image = document.createElement('img')
     image.setAttribute('src', properties[i].image)
     card.appendChild(image)
-    propertyContainer.appendChild(card)
     showDetails(you.permissions, card, properties[i].price)
+    propertyContainer.appendChild(card)
 }
 
 let currentLocation : [string, string, number] = ['London', '11.03', 17]
