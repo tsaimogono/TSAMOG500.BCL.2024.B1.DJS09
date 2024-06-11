@@ -73,19 +73,46 @@ isAvailable: boolean;
             country: 'Colombia'
         },
         contact: 'marywinkle@gmail.com',
+        isAvailable: true  
+    },
+    {
+        image: '',
+        title: 'Polish Cottage',
+        price: 34,
+        location: {
+            firstLine: 'no 23',
+            city: 'Gdansk',
+            code: 343903,
+            country: 'Poland'
+        },
+        contact: 'garydavis@hotmail.com',
+        isAvailable: false 
+    },
+    {
+        image: '',
+        title: 'London Flat',
+        price: 23,
+        location: {
+            firstLine: 'flat 15',
+            city: 'London',
+            code: 35433,
+            country: 'United Kingdom',
+        },
+        contact: 'andyluger@aol.com',
         isAvailable: true
-        
     }
 ]
 
-
-
-function populateUser(isReturning : boolean, userName: string ) {
-    if (isReturning == true){
-        returningUserDisplay.innerHTML = 'back'
-    }
-    userNameDisplay.innerHTML = userName
-}
+// Functions
+showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
 
+for (let i = 0; i < properties.length; i++) {
+    const card = document.createElement('div')
+    card.classList.add('card')
+    card.innerHTML = properties[i].title
+    const image = document.createElement('img')
+    image.setAttribute('src', properties[i].image)
+    card.appendChild(image)
+}
