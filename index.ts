@@ -1,5 +1,4 @@
 
-
 import { showReviewTotal, populateUser } from './utils'
 import { Permissions, LoyaltyUser } from './enums'
 const propertyContainer = document.querySelector('.properties')
@@ -7,12 +6,8 @@ const footer = document.querySelector('.footer')
 
 let isOpen: boolean
 
-const reviews : {
-    name: string;
-    stars: number;
-    loyaltyUser: LoyaltyUser;
-    date: string;
-}[] = [
+// Reviews
+const reviews : any[]= [
     {
         name: 'Sheia',
         stars: 5,
@@ -30,43 +25,35 @@ const reviews : {
         stars: 4,
         loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '27-03-2021'
+        description: 'Great hosts, location was a bit further than said',
     },
 ]
 
-
-function showReviewTotal(value: number, reviewer: string, isLoyalty: boolean) {
-    const iconDisplay = isLoyalty ? '⭐' : ''
-    reviewTotalDisplay.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer + ' ' + iconDisplay
-}
-
-showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
-
-const you: {
-    firstName: string;
-    lastName: string;
-    isReturning: boolean;
-    age: number;
-    stayedAt: string[]
-} = {
+const you = {
     firstName: 'Bobby',
     lastName: 'Brown',
+    permissions: Permissions.ADMIN,
     isReturning: true,
     age: 35,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
-const properties:{image: string;
+
+// Array of Properties
+const properties : {
+    image: string;
     title: string;
     price: number;
     location: {
         firstLine: string;
         city: string;
         code: number;
-        country:string;
-};  contact:[ number, string ];
-isAvailable: boolean;
+        country: string;
+    };
+    contact: [ number, string ];
+    isAvailable: boolean;
 }[] = [
     {
-        image: '',
+        image: 'images/colombia-property.jpg',
         title: 'Colombian Shack',
         price: 45,
         location: {
@@ -75,11 +62,11 @@ isAvailable: boolean;
             code: 45632,
             country: 'Colombia'
         },
-        contact:[+1123495082908, 'marywinkle@gmail.com'],
+        contact: [+112343823978921, 'marywinkle@gmail.com'],
         isAvailable: true  
     },
     {
-        image: '',
+        image: 'images/poland-property.jpg',
         title: 'Polish Cottage',
         price: 34,
         location: {
@@ -88,11 +75,11 @@ isAvailable: boolean;
             code: 343903,
             country: 'Poland'
         },
-        contact: [+1123495082908, 'garydavis@hotmail.com'],
+        contact: [+1298239028490830, 'garydavis@hotmail.com'],
         isAvailable: false 
     },
     {
-        image: '',
+        image: 'images/london-property.jpg',
         title: 'London Flat',
         price: 23,
         location: {
@@ -101,7 +88,7 @@ isAvailable: boolean;
             code: 35433,
             country: 'United Kingdom',
         },
-        contact: [+1123495082908, 'andyluger@aol.com'],
+        contact: [+34829374892553, 'andyluger@aol.com'],
         isAvailable: true
     }
 ]
@@ -122,9 +109,7 @@ for (let i = 0; i < properties.length; i++) {
     propertyContainer.appendChild(card)
 }
 
-// use your location, your current time, and the current temperature of your
-// location
-let currentLocation: [string, string, number] = ['London', '11:35', 17]
+let currentLocation : [string, string, number] = ['London', '11.03', 17]
 footer.innerHTML = currentLocation[0] + ' ' + currentLocation[1] + ' ' + currentLocation[2] + '°'
 
 
