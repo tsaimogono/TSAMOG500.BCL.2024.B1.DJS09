@@ -51,7 +51,16 @@ const you: {
     age: 35,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
+const properties:{image: string;
+    title: string;
+    price: number;
+    location: {
+        firstLine: string;
+        city: string;
+        code: number;
+        country: string;
 
+};
 
 function populateUser(isReturning : boolean, userName: string ) {
     if (isReturning == true){
